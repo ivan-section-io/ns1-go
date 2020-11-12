@@ -95,6 +95,12 @@ type Meta struct {
 	// []string or FeedPtr.
 	CAProvince interface{} `json:"ca_province,omitempty"`
 
+	// ISO 3166-2 principal subdivisions (e.g., provinces or states)
+	// Grouped by ISO 3166-1 alpha-2 code of the parent country, arrays of subdivision
+	// code part only (each up to three alphanumeric characters)
+	// map[string][]string or FeedPtr.
+	Subdivisions interface{} `json:"subdivisions,omitempty"`
+
 	// INFORMATIONAL
 
 	// Notes to indicate any necessary details for operators.
